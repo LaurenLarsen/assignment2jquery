@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="jquery.js"></script>
+	<script src="jquery.sticky.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#responsive-menu').mobileMenu();
+			$("#inputSolutions").load("assets/solutions.txt");
+			$("#inputSolutions").css({'border': '1px solid #929CA4','padding': '3px 0px 3px 20px','background-color':'#DFE3E6', });
+			$( document ).tooltip();
+			$("#accordion").accordion();
+			$("#testimonials").sticky({topSpacing:0});
+    
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html" title="learn more about vectacorp">Home</a></li>
+				<li><a href="aboutus.html" title="hear what people are saying about us">About Us </a></li>
+				<li><a href="solutions.html" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers">Solutions</a></li>
+				<li><a href="support.html" title="Tecnical Support">Support</a></li>
+				<li><a href="contactus.html" title="Reach Out we would love to hear from you">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Our Solutions</h4>
+
+			<p id="inputSolutions">&nbsp;</p>
+		</section>
+		
+		<section id="testimonials" class="five columns">
+			<h4 class="sticker">Quick Nav</h4>
+
+			<!-- INSERT ACCORDION HERE -->
+			<div id="accordion" >
+				<div>
+				<p><a>vProspect</a></p>
+				</div>
+				
+				<div>
+				<p><a>vConvert</a></p>
+				</div>
+
+				<div>
+				<p><a>vRetain</a></p>
+				</div>
+	
+				</div>
+		</section>
+	</main>
+</body>
+</html>
